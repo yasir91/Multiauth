@@ -30,8 +30,8 @@ return [
     |
     */
 
-    'use_ico_only' => false,
-    'use_full_favicon' => false,
+    'use_ico_only' => true,
+    'use_full_favicon' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Daraz</b>Hubs',
+    'logo' => '<b>SS</b>T',
     'Seller-logo' => '<b>Seller </b> Schedulling Tool',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
@@ -66,7 +66,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
@@ -83,10 +83,10 @@ return [
     |
     */
 
-    'layout_topnav' => null,
+    'layout_topnav' => true,
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
 
     /*
@@ -108,7 +108,7 @@ return [
     'classes_content' => 'container-fluid',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-blue navbar-light yasir-cl',
     'classes_topnav_nav' => 'navbar-expand-md',
     'classes_topnav_container' => 'container',
 
@@ -124,12 +124,12 @@ return [
     |
     */
 
-    'sidebar_mini' => true,
-    'sidebar_collapse' => false,
+    'sidebar_mini' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
-    'sidebar_collapse_remember' => false,
+    'sidebar_collapse_remember' => true,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
+    'sidebar_scrollbar_theme' => 'os-theme-sky',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 100,
@@ -215,39 +215,45 @@ return [
 
     'menu' => [
         [
-            'text' => 'new search',
+            'text' => 'search',
             'search' => true,
             'topnav' => true,
-            'admin' => true,
+            'seller' => true,
         ],
+//        [
+//            'text' => 'blog',
+//            'url'  => 'admin/blog',
+////            'can'  => 'manage-blog',
+//            'topnav' => true,
+//        ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'admin' => true,
-//            'topnav' => false,
-//            'can'  => 'manage-blog',
-        ],
-        /*[
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
+            'topnav'      => true,
+            'seller' => true,
+//            'can'  => 'manage-blog',
+
         ],
-        ['header' => 'account_settings'],
-        [
+//        ['header' => 'account_settings'],
+        /*[
             'text' => 'profile',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
+            'topnav' => true,
         ],
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+            'topnav' => true,
         ],
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
+            'topnav' => true,
             'submenu' => [
                 [
                     'text' => 'level_one',
@@ -283,7 +289,7 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+//        ['header' => 'labels'],
         [
             'text'       => 'important',
             'icon_color' => 'red',
@@ -291,12 +297,16 @@ return [
         [
             'text'       => 'warning',
             'icon_color' => 'yellow',
+            'can'  => 'manage-blog',
         ],
         [
             'text'       => 'information',
             'icon_color' => 'aqua',
+            'can'  => 'manage-blog',
+
         ],*/
     ],
+
 
     /*
     |--------------------------------------------------------------------------

@@ -1,9 +1,9 @@
-@if (isset($item['admin']) && (!isset($item['topnav']) || (isset($item['topnav']) && !$item['topnav'])) && (!isset($item['topnav_right']) || (isset($item['topnav_right']) && !$item['topnav_right'])) && (!isset($item['topnav_user']) || (isset($item['topnav_user']) && !$item['topnav_user'])))
+@if ((!isset($item['topnav']) || (isset($item['topnav']) && !$item['topnav'])) && (!isset($item['topnav_right']) || (isset($item['topnav_right']) && !$item['topnav_right'])) && (!isset($item['topnav_user']) || (isset($item['topnav_user']) && !$item['topnav_user'])))
     @if (is_string($item))
         <li @if (isset($item['id'])) id="{{ $item['id'] }}" @endif class="nav-header">{{ $item }}</li>
     @elseif (isset($item['header']))
         <li @if (isset($item['id'])) id="{{ $item['id'] }}" @endif class="nav-header">{{ $item['header'] }}</li>
-    @elseif (isset($item['admin']) && isset($item['search']) && $item['search'])
+    @elseif (isset($item['search']) && $item['search'])
         <li @if (isset($item['id'])) id="{{ $item['id'] }}" @endif>
             <form action="{{ $item['href'] }}" method="{{ $item['method'] }}" class="form-inline">
               <div class="input-group">
@@ -17,7 +17,7 @@
             </form>
         </li>
     @else
-        <li @if (isset($item['admin']) && isset($item['id'])) id="{{ $item['id'] }}" @endif class="nav-item @if (isset($item['submenu'])){{ $item['submenu_class'] }}@endif">
+        <li @if (isset($item['id'])) id="{{ $item['id'] }}" @endif class="nav-item @if (isset($item['submenu'])){{ $item['submenu_class'] }}@endif">
             <a class="nav-link {{ $item['class'] }} @if(isset($item['shift'])) {{ $item['shift'] }} @endif" href="{{ $item['href'] }}"
                @if (isset($item['target'])) target="{{ $item['target'] }}" @endif
             >
@@ -35,7 +35,7 @@
             </a>
             @if (isset($item['submenu']))
                 <ul class="nav nav-treeview">
-                    @each('adminlte::partials.menu-item', $item['submenu'], 'item')
+                    @each('seller::partials.menu-item', $item['submenu'], 'item')
                 </ul>
             @endif
         </li>

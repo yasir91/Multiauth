@@ -1,6 +1,6 @@
-@extends('adminlte::page')
+@extends('seller::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'SST')
 
 @section('content_header')
     <h1 class="m-0 text-dark">Seller Dashboard</h1>

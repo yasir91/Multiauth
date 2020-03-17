@@ -487,7 +487,6 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider"
                     ]
                 }
             },

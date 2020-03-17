@@ -1,4 +1,4 @@
-@if (isset($item['admin']) && is_array($item))
+@if (is_array($item))
     <li @if (isset($item['id'])) id="{{ $item['id'] }}" @endif class="@if (isset($item['submenu']))dropdown-submenu @endif">
         <a class="dropdown-item @if (isset($item['submenu']))dropdown-toggle @endif" href="{{ $item['href'] }}"
            @if (isset($item['submenu'])) data-toggle="dropdown" @endif
@@ -13,7 +13,7 @@
         </a>
         @if (isset($item['submenu']))
             <ul class="dropdown-menu border-0 shadow">
-                @each('adminlte::partials.menu-item-sub-top-nav', $item['submenu'], 'item')
+                @each('seller::partials.menu-item-sub-top-nav', $item['submenu'], 'item')
             </ul>
         @endif
     </li>

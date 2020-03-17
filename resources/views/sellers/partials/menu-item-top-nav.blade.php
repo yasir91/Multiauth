@@ -1,15 +1,15 @@
-@if (isset($item['admin']) && isset($item['search']) && $item['search'])
+@if (isset($item['seller']) && isset($item['search']) && $item['search'])
   <form action="{{ $item['href'] }}" method="{{ $item['method'] }}" class="form-inline ml-2 mr-2">
     <div class="input-group">
       <input class="form-control form-control-navbar" type="search" name="{{ $item['input_name'] }}" placeholder="{{ $item['text'] }}" aria-label="{{ $item['aria-label'] ?? $item['text'] }}">
       <div class="input-group-append">
-        <button class="btn btn-navbar" type="submit">123
+        <button class="btn btn-navbar" type="submit">
           <i class="fas fa-search"></i>
         </button>
       </div>
     </div>
   </form>
-@elseif (isset($item['admin']) && is_array($item))
+@elseif (is_array($item) && isset($item['seller']))
   <li @if (isset($item['id'])) id="{{ $item['id'] }}" @endif class="nav-item {{ $item['top_nav_class'] }}">
       <a class="nav-link @if (isset($item['submenu']))dropdown-item dropdown-toggle @endif" href="{{ $item['href'] }}"
          @if (isset($item['submenu'])) data-toggle="dropdown" @endif
@@ -24,7 +24,7 @@
       </a>
       @if (isset($item['submenu']))
           <ul class="dropdown-menu border-0 shadow">
-              @each('adminlte::partials.menu-item-sub-top-nav', $item['submenu'], 'item')
+              @each('seller::partials.menu-item-sub-top-nav', $item['submenu'], 'item')
           </ul>
       @endif
   </li>

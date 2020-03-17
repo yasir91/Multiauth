@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <title>@yield('title_prefix', config('adminlte-seller.title_prefix', ''))
-@yield('title', config('adminlte-seller.title', 'AdminLTE 3'))
-@yield('title_postfix', config('adminlte-seller.title_postfix', ''))</title>
-    @if(! config('adminlte-seller.enabled_laravel_mix'))
+    <title>@yield('title_prefix', config('seller.title_prefix', ''))
+@yield('title', config('seller.title', 'SST'))
+@yield('title_postfix', config('seller.title_postfix', ''))</title>
+    @if(! config('seller.enabled_laravel_mix'))
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
 
@@ -27,9 +27,9 @@
 
     @yield('meta_tags')
 
-    @if(config('adminlte-seller.use_ico_only'))
+    @if(config('seller.use_ico_only'))
         <link rel="shortcut icon" href="{{ asset('favicons/favicon.ico') }}" />
-    @elseif(config('adminlte-seller.use_full_favicon'))
+    @elseif(config('seller.use_full_favicon'))
         <link rel="shortcut icon" href="{{ asset('favicons/favicon.ico') }}" />
         <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicons/apple-icon-57x57.png') }}">
         <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('favicons/apple-icon-60x60.png') }}">
@@ -53,7 +53,7 @@
 
 @yield('body')
 
-@if(! config('adminlte-seller.enabled_laravel_mix'))
+@if(! config('seller.enabled_laravel_mix'))
 <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
