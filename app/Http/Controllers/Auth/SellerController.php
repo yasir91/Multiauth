@@ -22,7 +22,8 @@ class SellerController extends Controller
      *
      * @return view
      */
-    public function index(){
+    public function index()
+    {
         return view('seller');
     }
 }

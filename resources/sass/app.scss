@@ -1,5 +1,42 @@
-//
-
 .yasir-cl{
-    height: 130px;
+    height: 80px;
+    background-color:#1e4657;
+}
+
+.sst-logo{
+    width:300px;
+}
+
+.navbar-nav{
+    display: inline-block !important;
+
+    .nav-item {
+        float: left;
+        margin-right: 15px;
+    }
+    .nav-link{
+        color:#000;
+        i{
+            color: #ef7026;
+            font-size: 30px;
+            vertical-align: sub;
+            margin-right: 5px;
+        }
+    }
+}
+
+.btn-warning {
+    color: #fff !important;
+    background-color: #ef7026 !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.container{
+    padding:0 !important;
+    @media (min-width: 1200px){
+    max-width: 1200px !important;
+
+    }
 }

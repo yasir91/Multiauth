@@ -9,7 +9,8 @@
 @yield('title', config('adminlte.title', 'AdminLTE 3'))
 @yield('title_postfix', config('adminlte.title_postfix', ''))</title>
     @if(! config('adminlte.enabled_laravel_mix'))
-    <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
 
     @include('adminlte::plugins', ['type' => 'css'])

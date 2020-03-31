@@ -5,21 +5,20 @@ namespace App\Http\ViewComposers;
 use Illuminate\View\View;
 use App\Providers\AdminLte;
 
-class AdminLteComposer
+class SellerComposer
 {
     /**
      * @var AdminLte
      */
-    private $adminlte;
+    private $sellerAdmin;
 
-    public function __construct(AdminLte $adminlte)
+    public function __construct(AdminLte $sellerAdmin)
     {
-        $this->adminlte = $adminlte;
+        $this->sellerAdmin = $sellerAdmin;
     }
 
     public function compose(View $view)
     {
-
-        $view->with('adminlte', $this->adminlte);
+        $view->with('seller', $this->sellerAdmin);
     }
 }

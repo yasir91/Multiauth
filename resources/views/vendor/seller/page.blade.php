@@ -68,7 +68,7 @@
                     </a>
                 @else
                     <a href="{{ $dashboard_url }}" class="navbar-brand {{ config('seller.classes_brand') }}">
-                        <img src="{{ asset(config('seller.logo_img', 'vendor/adminlte/dist/img/AdminLTELogo.png')) }}" alt="{{config('seller.logo_img_alt', 'AdminLTE')}}" class="{{ config('seller.logo_img_class', 'brand-image img-circle elevation-3') }}" style="opacity: .8">
+                        <img src="{{ asset(config('seller.logo_img', 'vendor/adminlte/dist/img/AdminLTELogo.png')) }}" alt="{{config('seller.logo_img_alt', 'AdminLTE')}}" class="{{ config('seller.logo_img_class', 'brand-image img-circle elevation-3') }}">
                         <span class="brand-text font-weight-light {{ config('seller.classes_brand_text') }}">
                             {!! config('seller.logo', '<b>Admin</b>LTE') !!}
                         </span>
@@ -78,12 +78,6 @@
                 <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-                    <ul class="nav navbar-nav">
-                        @each('seller::partials.menu-item-top-nav-left', $seller->menu(), 'item')
-                    </ul>
-                </div>
             @else
             <nav class="main-header navbar {{config('seller.classes_topnav_nav', 'navbar-expand-md')}} {{config('seller.classes_topnav', 'navbar-white navbar-light')}}">
                 <ul class="navbar-nav">
@@ -103,7 +97,7 @@
                     @if(Auth::user())
                         @if(config('seller.usermenu_enabled'))
                         <li class="nav-item dropdown user-menu">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <a href="#" class="btn btn-block btn-warning btn-lg" data-toggle="dropdown">
                                 @if(config('seller.usermenu_image'))
                                 <img src="{{ Auth::user()->adminlte_image() }}" class="user-image img-circle elevation-2" alt="{{ Auth::user()->name }}">
                                 @endif
@@ -174,6 +168,15 @@
                     </nav>
                 @endif
             </nav>
+
+
+
+            <div class="container collapse navbar-collapse order-3 show" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    @each('seller::partials.menu-item-top-nav-left', $seller->menu(), 'item')
+                </ul>
+            </div>
+
         @if(!config('seller.layout_topnav') && !View::getSection('layout_topnav'))
         <aside class="main-sidebar {{config('seller.classes_sidebar', 'sidebar-dark-primary elevation-4')}}">
             @if(config('seller.logo_img_xl'))

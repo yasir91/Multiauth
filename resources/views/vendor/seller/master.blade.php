@@ -9,6 +9,7 @@
 @yield('title', config('seller.title', 'SST'))
 @yield('title_postfix', config('seller.title_postfix', ''))</title>
     @if(! config('seller.enabled_laravel_mix'))
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
 

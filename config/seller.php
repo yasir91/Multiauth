@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'DarazHubs',
-    'title_prefix' => '',
+    'title'         => 'DarazHubs',
+    'title_prefix'  => '',
     'title_postfix' => '',
 
     /*
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => true,
+    'use_ico_only'     => true,
     'use_full_favicon' => true,
 
     /*
@@ -45,13 +45,13 @@ return [
     |
     */
 
-    'logo' => '<b>SS</b>T',
-    'Seller-logo' => '<b>Seller </b> Schedulling Tool',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
-    'logo_img_xl' => null,
+    'logo'              => '',
+    'Seller-logo'       => '<b>Seller </b>Schedulling',
+    'logo_img'          => 'assets/White-logo.png',
+    'logo_img_class'    => 'sst-logo',
+    'logo_img_xl'       => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt'      => 'Daraz Seller Schedulling Tool',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,11 +65,11 @@ return [
     |
     */
 
-    'usermenu_enabled' => true,
-    'usermenu_header' => true,
+    'usermenu_enabled'      => true,
+    'usermenu_header'       => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
+    'usermenu_image'        => false,
+    'usermenu_desc'         => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -83,11 +83,11 @@ return [
     |
     */
 
-    'layout_topnav' => true,
-    'layout_boxed' => null,
+    'layout_topnav'        => true,
+    'layout_boxed'         => null,
     'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => true,
-    'layout_fixed_footer' => null,
+    'layout_fixed_navbar'  => true,
+    'layout_fixed_footer'  => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -101,15 +101,15 @@ return [
     |
     */
 
-    'classes_body' => '',
-    'classes_brand' => '',
-    'classes_brand_text' => '',
-    'classes_content_header' => 'container-fluid',
-    'classes_content' => 'container-fluid',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-blue navbar-light yasir-cl',
-    'classes_topnav_nav' => 'navbar-expand-md',
+    'classes_body'             => '',
+    'classes_brand'            => '',
+    'classes_brand_text'       => '',
+    'classes_content_header'   => 'container-fluid',
+    'classes_content'          => 'container-fluid',
+    'classes_sidebar'          => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar_nav'      => '',
+    'classes_topnav'           => 'yasir-cl',
+    'classes_topnav_nav'       => 'navbar-expand-md',
     'classes_topnav_container' => 'container',
 
     /*
@@ -124,15 +124,15 @@ return [
     |
     */
 
-    'sidebar_mini' => false,
-    'sidebar_collapse' => true,
-    'sidebar_collapse_auto_size' => false,
-    'sidebar_collapse_remember' => true,
+    'sidebar_mini'                            => false,
+    'sidebar_collapse'                        => true,
+    'sidebar_collapse_auto_size'              => false,
+    'sidebar_collapse_remember'               => true,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-sky',
-    'sidebar_scrollbar_auto_hide' => 'l',
-    'sidebar_nav_accordion' => true,
-    'sidebar_nav_animation_speed' => 100,
+    'sidebar_scrollbar_theme'                 => 'os-theme-sky',
+    'sidebar_scrollbar_auto_hide'             => 'l',
+    'sidebar_nav_accordion'                   => true,
+    'sidebar_nav_animation_speed'             => 100,
 
     /*
     |--------------------------------------------------------------------------
@@ -146,12 +146,12 @@ return [
     |
     */
 
-    'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
-    'right_sidebar_slide' => true,
-    'right_sidebar_push' => true,
-    'right_sidebar_scrollbar_theme' => 'os-theme-light',
+    'right_sidebar'                     => false,
+    'right_sidebar_icon'                => 'fas fa-cogs',
+    'right_sidebar_theme'               => 'dark',
+    'right_sidebar_slide'               => true,
+    'right_sidebar_push'                => true,
+    'right_sidebar_scrollbar_theme'     => 'os-theme-light',
     'right_sidebar_scrollbar_auto_hide' => 'l',
 
     /*
@@ -169,20 +169,20 @@ return [
     'use_route_url' => false,
 
     'dashboard_url' => 'home',
-    'seller_url' => 'seller',
+    'seller_url'    => 'seller',
 
-    'logout_url' => 'user/logout',
+    'logout_url'        => 'user/logout',
     'seller_logout_url' => 'seller/logout',
 
-    'login_url' => 'login',
+    'login_url'        => 'login',
     'seller_login_url' => 'seller/login',
 
     'register_url' => 'register',
 
-    'password_reset_url' => 'password/reset',
+    'password_reset_url'        => 'password/reset',
     'seller_password_reset_url' => 'seller/password/reset',
 
-    'password_email_url' => 'password/email',
+    'password_email_url'        => 'password/email',
     'seller_password_email_url' => 'seller/password/email',
 
     'profile_url' => false,
@@ -215,96 +215,19 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
-            'search' => true,
+            'text'   => 'About DSS',
+            'url'    => 'about',
+            'icon'   => 'fas fa-info-circle',
             'topnav' => true,
             'seller' => true,
         ],
-//        [
-//            'text' => 'blog',
-//            'url'  => 'admin/blog',
-////            'can'  => 'manage-blog',
-//            'topnav' => true,
-//        ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-            'topnav'      => true,
+            'text'   => 'About ASC',
+            'url'    => 'about',
+            'icon'   => 'fas fa-info-circle',
+            'topnav' => true,
             'seller' => true,
-//            'can'  => 'manage-blog',
-
         ],
-//        ['header' => 'account_settings'],
-        /*[
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-            'topnav' => true,
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-            'topnav' => true,
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'topnav' => true,
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-//        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
-            'can'  => 'manage-blog',
-
-        ],*/
     ],
 
 
@@ -344,76 +267,76 @@ return [
 
     'plugins' => [
         [
-            'name' => 'Datatables',
+            'name'   => 'Datatables',
             'active' => false,
-            'files' => [
+            'files'  => [
                 [
-                    'type' => 'js',
-                    'asset' => false,
+                    'type'     => 'js',
+                    'asset'    => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
                 ],
                 [
-                    'type' => 'js',
-                    'asset' => false,
+                    'type'     => 'js',
+                    'asset'    => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
                 ],
                 [
-                    'type' => 'css',
-                    'asset' => false,
+                    'type'     => 'css',
+                    'asset'    => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
             ],
         ],
         [
-            'name' => 'Select2',
+            'name'   => 'Select2',
             'active' => false,
-            'files' => [
+            'files'  => [
                 [
-                    'type' => 'js',
-                    'asset' => false,
+                    'type'     => 'js',
+                    'asset'    => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
                 ],
                 [
-                    'type' => 'css',
-                    'asset' => false,
+                    'type'     => 'css',
+                    'asset'    => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
                 ],
             ],
         ],
         [
-            'name' => 'Chartjs',
+            'name'   => 'Chartjs',
             'active' => false,
-            'files' => [
+            'files'  => [
                 [
-                    'type' => 'js',
-                    'asset' => false,
+                    'type'     => 'js',
+                    'asset'    => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js',
                 ],
             ],
         ],
         [
-            'name' => 'Sweetalert2',
+            'name'   => 'Sweetalert2',
             'active' => false,
-            'files' => [
+            'files'  => [
                 [
-                    'type' => 'js',
-                    'asset' => false,
+                    'type'     => 'js',
+                    'asset'    => false,
                     'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
                 ],
             ],
         ],
         [
-            'name' => 'Pace',
+            'name'   => 'Pace',
             'active' => false,
-            'files' => [
+            'files'  => [
                 [
-                    'type' => 'css',
-                    'asset' => false,
+                    'type'     => 'css',
+                    'asset'    => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-center-radar.min.css',
                 ],
                 [
-                    'type' => 'js',
-                    'asset' => false,
+                    'type'     => 'js',
+                    'asset'    => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
                 ],
             ],

@@ -12,15 +12,15 @@ use JeroenNoten\LaravelAdminLte\Console\AdminLtePluginCommand;
 use JeroenNoten\LaravelAdminLte\Console\AdminLteStatusCommand;
 use JeroenNoten\LaravelAdminLte\Console\AdminLteUpdateCommand;
 use JeroenNoten\LaravelAdminLte\Events\BuildingMenu;
-use App\Http\ViewComposers\AdminLteComposer;
+use App\Http\ViewComposers\SellerComposer;
 
-class AdminLteServiceProvider extends BaseServiceProvider
+class SellerServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
         $this->app->singleton(AdminLte::class, function (Container $app) {
             return new AdminLte(
-                $app['config']['adminlte.filters'],
+                $app['config']['seller.filters'],
                 $app['events'],
                 $app
             );
@@ -49,19 +49,19 @@ class AdminLteServiceProvider extends BaseServiceProvider
     {
 
         $viewsPath = $this->packagePath('resources/views');
-        $this->loadViewsFrom($viewsPath, 'adminlte');
+        $this->loadViewsFrom($viewsPath, 'seller');
     }
 
     private function loadTranslations()
     {
         $translationsPath = $this->packagePath('resources/lang');
-        $this->loadTranslationsFrom($translationsPath, 'adminlte');
+        $this->loadTranslationsFrom($translationsPath, 'seller');
     }
 
     private function loadConfig()
     {
-        $configPath = $this->packagePath('config/adminlte.php');
-        $this->mergeConfigFrom($configPath, 'adminlte');
+        $configPath = $this->packagePath('config/seller.php');
+        $this->mergeConfigFrom($configPath, 'seller');
     }
 
     private function packagePath($path)
@@ -79,13 +79,13 @@ class AdminLteServiceProvider extends BaseServiceProvider
 
     private function registerViewComposers(Factory $view)
     {
-            $view->composer('adminlte::page', AdminLteComposer::class);
+            $view->composer('seller::page', SellerComposer::class);
     }
 
     public static function registerMenu(Dispatcher $events, Repository $config)
     {
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($config) {
-            $menu = $config->get('adminlte.menu');
+            $menu = $config->get('seller.menu');
             call_user_func_array([$event->menu, 'add'], $menu);
         });
     }
